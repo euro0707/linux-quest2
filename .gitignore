@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.npm
+
+# Production build
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Development cache
+.vite/
+.cache/
+
+# Backup files
+*.zip
+*.bak
+
+# Old project folders (for cleanup)
+learn/
+linux-quest-day1/
+linux-quest/
+extracted/
+day1-simple/
+
+# Temporary test files
+test-*.html

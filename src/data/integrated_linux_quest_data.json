@@ -1,0 +1,464 @@
+{
+  "day1": {
+    "day": 1,
+    "title": "Linuxとは何か？",
+    "slides": [
+      {
+        "title": "🎯 黒い画面への第一歩",
+        "highlight": "君だけじゃない。プログラマーの90%が最初に感じる恐怖",
+        "sections": [
+          {
+            "title": "💭 共感",
+            "icon": "💭",
+            "type": "list",
+            "items": [
+              "「黒い画面 = 難しそう」は自然な反応",
+              "HTMLで挫折した経験も、実は多くの人が通る道",
+              "でも実際は、たった3つのコマンドから始まる世界"
+            ]
+          },
+          {
+            "title": "💎 価値提示",
+            "icon": "💎",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "pwd",
+                "description": "現在地の確認（迷子にならない）"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "💼 実際の現場での使われ方",
+        "sections": [
+          {
+            "title": "🔍 デバッグシーン",
+            "icon": "🔍",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "pwd",
+                "output": "/var/www/html/project",
+                "note": "現在のプロジェクトフォルダを確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ 今すぐスタート！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「黒い画面って意外と簡単じゃん！」と思えるようになること"
+          }
+        ]
+      }
+    ],
+    "story": "ようこそLinux Quest！あなたは今、強力なLinuxの世界への扉を開こうとしています。",
+    "challenge_text": "まず基本から。現在のディレクトリを確認するコマンドを入力してください。",
+    "expected_commands": ["pwd"],
+    "followup": "正解！pwdコマンドで現在のディレクトリパスを確認できます。",
+    "real_world_use": "サーバー作業で自分の位置を把握するのに毎日使う基本コマンドです。"
+  },
+  "day2": {
+    "day": 2,
+    "title": "コマンドの基本",
+    "slides": [
+      {
+        "title": "🏗️ デジタル世界の住所システム",
+        "highlight": "年収1000万円のプロが毎日使う「場所の概念」",
+        "sections": [
+          {
+            "title": "💼 プロの基本ツール",
+            "icon": "💼",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "ls",
+                "description": "ディレクトリの中身を確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎯 ファイル一覧の実際",
+        "sections": [
+          {
+            "title": "📁 ディレクトリ確認シーン",
+            "icon": "📁",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "ls",
+                "output": "documents  downloads  projects  README.md",
+                "note": "現在のディレクトリの内容を表示"
+              },
+              {
+                "command": "ls -l",
+                "note": "詳細な情報付きでファイルリストを表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 実践タイム！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「ファイルリストってこうやって見るんだ！」と理解すること"
+          }
+        ]
+      }
+    ],
+    "story": "Linux Quest Day2！コマンドライン操作の基礎を身につけましょう。",
+    "challenge_text": "現在のディレクトリにあるファイルとフォルダを一覧表示してください。",
+    "expected_commands": ["ls", "ls -l", "ls -la"],
+    "followup": "素晴らしい！lsコマンドでディレクトリの中身を確認できます。",
+    "real_world_use": "ファイル管理やサーバー運用で最も頻繁に使用するコマンドの一つです。"
+  },
+  "day3": {
+    "day": 3,
+    "title": "ファイル操作",
+    "slides": [
+      {
+        "title": "🔧 ファイル作成マスター",
+        "highlight": "プロジェクト管理の第一歩",
+        "sections": [
+          {
+            "title": "⚡ ファイル作成ツール",
+            "icon": "⚡",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "touch",
+                "description": "新しい空のファイルを作成"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎯 実際のファイル作成シーン",
+        "sections": [
+          {
+            "title": "📄 プロジェクトファイル作成",
+            "icon": "📄",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "touch quest.txt",
+                "note": "quest.txtという名前の空ファイルを作成"
+              },
+              {
+                "command": "touch README.md",
+                "note": "プロジェクトの説明ファイルを作成"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 ファイル作成開始！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「ファイル作成ってこんなに簡単なんだ！」と実感すること"
+          }
+        ]
+      }
+    ],
+    "story": "Day3では実際にファイルを作成・操作してみましょう！",
+    "challenge_text": "新しいファイル 'quest.txt' を作成してください。",
+    "expected_commands": ["touch quest.txt", "touch ./quest.txt"],
+    "followup": "完璧！touchコマンドで空のファイルを作成できました。",
+    "real_world_use": "ログファイルの作成やプレースホルダーファイルの生成に使用します。"
+  },
+  "day4": {
+    "day": 4,
+    "title": "権限と所有者",
+    "slides": [
+      {
+        "title": "🛡️ セキュリティの守護者への道",
+        "highlight": "年収1500万円の上級エンジニアが扱うセキュリティ基盤技術",
+        "sections": [
+          {
+            "title": "🔒 セキュリティの基盤",
+            "icon": "🔒",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "ls -l",
+                "description": "ファイルの詳細情報と権限を表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔥 権限確認の実際",
+        "sections": [
+          {
+            "title": "🌐 ファイル権限チェック",
+            "icon": "🌐",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "ls -l quest.txt",
+                "output": "-rw-r--r-- 1 user user 0 Aug  5 14:30 quest.txt",
+                "note": "ファイルの詳細な権限情報を確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ セキュリティマスターへ！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「セキュリティって意外と身近なんだ！」と理解すること"
+          }
+        ]
+      }
+    ],
+    "story": "Day4はLinuxの権限システムについて学びます。セキュリティの基本です！",
+    "challenge_text": "quest.txtファイルの詳細な権限情報を表示してください。",
+    "expected_commands": ["ls -l quest.txt", "ls -l ./quest.txt", "ls -la quest.txt"],
+    "followup": "よくできました！ファイルの権限と所有者情報を確認できます。",
+    "real_world_use": "サーバーのセキュリティ管理やファイルアクセス制御に不可欠です。"
+  },
+  "day5": {
+    "day": 5,
+    "title": "テキスト操作",
+    "slides": [
+      {
+        "title": "📖 テキストマスターへの道",
+        "highlight": "データ分析で年収1200万円エンジニアの必須スキル",
+        "sections": [
+          {
+            "title": "📋 テキスト操作の核心",
+            "icon": "📋",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "cat",
+                "description": "ファイル内容を一度に表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔍 実際の分析作業",
+        "sections": [
+          {
+            "title": "📊 ファイル内容確認",
+            "icon": "📊",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "cat quest.txt",
+                "note": "quest.txtファイルの中身を表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 テキスト分析開始！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「ファイルの中身がこんなに詳しく見れるんだ！」と発見すること"
+          }
+        ]
+      }
+    ],
+    "story": "Day5ではテキストファイルの中身を確認する方法を学びます。",
+    "challenge_text": "quest.txtファイルの中身を表示してください。",
+    "expected_commands": ["cat quest.txt", "cat ./quest.txt", "less quest.txt", "more quest.txt"],
+    "followup": "素晴らしい！ファイルの内容を表示できました。",
+    "real_world_use": "ログファイルの確認や設定ファイルの内容チェックに毎日使用します。"
+  },
+  "day6": {
+    "day": 6,
+    "title": "パッケージ管理",
+    "slides": [
+      {
+        "title": "⚙️ システム管理者への道",
+        "highlight": "インフラエンジニア年収1300万円の基盤技術",
+        "sections": [
+          {
+            "title": "🔧 システム管理の核心",
+            "icon": "🔧",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "sudo apt update",
+                "description": "パッケージリストを最新に更新"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🌐 本番環境の管理",
+        "sections": [
+          {
+            "title": "🚀 サーバー運用シーン",
+            "icon": "🚀",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "sudo apt update",
+                "output": "Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease",
+                "note": "パッケージ情報を最新に更新"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ システム管理体験！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「システム管理ってこうやるんだ！」と理解すること"
+          }
+        ]
+      }
+    ],
+    "story": "Day6はソフトウェアのインストールについて学びましょう。",
+    "challenge_text": "パッケージリストを更新するコマンドを入力してください（Ubuntu/Debian系）。",
+    "expected_commands": ["sudo apt update", "apt update"],
+    "followup": "正解！パッケージリストを最新の状態に更新できます。",
+    "real_world_use": "サーバーのメンテナンスやソフトウェア管理で必須の作業です。"
+  },
+  "day7": {
+    "day": 7,
+    "title": "シェルスクリプト入門",
+    "slides": [
+      {
+        "title": "🤖 自動化マスターへの道",
+        "highlight": "DevOpsエンジニア年収1400万円への第一歩",
+        "sections": [
+          {
+            "title": "⏰ 時間操作の基本",
+            "icon": "⏰",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "date",
+                "description": "現在の日時を表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "📅 実際の自動化シーン",
+        "sections": [
+          {
+            "title": "🔄 自動化スクリプト",
+            "icon": "🔄",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "date",
+                "output": "Wed Aug  5 14:30:25 JST 2025",
+                "note": "現在の日時を確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ 自動化の世界へ！",
+        "sections": [
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「自動化の仕組みが見えてきた！」と感じること"
+          }
+        ]
+      }
+    ],
+    "story": "Day7では自動化の第一歩、シェルスクリプトについて学びます。",
+    "challenge_text": "現在の日時を表示するコマンドを入力してください。",
+    "expected_commands": ["date"],
+    "followup": "完璧！dateコマンドで現在の日時を表示できます。",
+    "real_world_use": "ログファイルのタイムスタンプやスクリプトでの日時記録に使用します。"
+  },
+  "day8": {
+    "day": 8,
+    "title": "総復習クエスト",
+    "slides": [
+      {
+        "title": "🏆 Linux Quest 完全制覇",
+        "highlight": "あなたは今、年収アップの武器を手に入れた",
+        "sections": [
+          {
+            "title": "🎯 最終実技テスト",
+            "icon": "🎯",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir",
+                "description": "プロジェクトフォルダ作成"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 次のステップ",
+        "sections": [
+          {
+            "title": "📈 キャリアアップの道筋",
+            "icon": "📈",
+            "type": "list",
+            "items": [
+              "Webサーバー管理 (年収800万円〜)",
+              "クラウドインフラ設計 (年収1000万円〜)",
+              "DevOps・自動化エンジニア (年収1200万円〜)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎉 おめでとうございます！",
+        "sections": [
+          {
+            "title": "🌟 あなたの成果",
+            "icon": "🌟",
+            "type": "text",
+            "content": "8日間でLinuxの基礎をマスター。これであなたもLinux使いの仲間入りです！"
+          }
+        ]
+      }
+    ],
+    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。",
+    "challenge_text": "新しいディレクトリ 'linux-master' を作成してください。",
+    "expected_commands": ["mkdir linux-master", "mkdir ./linux-master"],
+    "followup": "🎉 Linux Quest完走おめでとうございます！あなたはLinuxの基礎を身につけました！",
+    "real_world_use": "これでLinuxサーバーの基本操作ができるようになりました。実際の開発や運用に活かしてください！"
+  }
+}

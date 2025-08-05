@@ -1,0 +1,706 @@
+{
+  "day1": {
+    "title": "🎯 黒い画面への第一歩",
+    "highlight": "君だけじゃない。プログラマーの90%が最初に感じる恐怖",
+    "slides": [
+      {
+        "title": "🎯 黒い画面への第一歩",
+        "highlight": "君だけじゃない。プログラマーの90%が最初に感じる恐怖",
+        "sections": [
+          {
+            "title": "💭 共感",
+            "icon": "💭",
+            "type": "list",
+            "items": [
+              "「黒い画面 = 難しそう」は自然な反応",
+              "HTMLで挫折した経験も、実は多くの人が通る道",
+              "でも実際は、たった3つのコマンドから始まる世界"
+            ]
+          },
+          {
+            "title": "💎 価値提示",
+            "icon": "💎",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "echo",
+                "description": "コンピューターとの会話"
+              },
+              {
+                "command": "pwd",
+                "description": "現在地の確認（迷子にならない）"
+              },
+              {
+                "command": "ls",
+                "description": "周囲の状況把握"
+              }
+            ]
+          },
+          {
+            "title": "🌟 安心感",
+            "icon": "🌟",
+            "type": "text",
+            "content": "これらのコマンドで年収500万→1000万円へのスキルアップが始まります。"
+          }
+        ]
+      },
+      {
+        "title": "💼 実際の現場での使われ方",
+        "sections": [
+          {
+            "title": "🔍 デバッグシーン",
+            "icon": "🔍",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "pwd",
+                "output": "/var/www/html/project",
+                "note": "現在のプロジェクトフォルダを確認"
+              },
+              {
+                "command": "ls -la",
+                "output": "total 24\ndrwxr-xr-x 6 user user 4096 config/\n-rw-r--r-- 1 user user 1234 index.html",
+                "note": "ファイル一覧とアクセス権限をチェック"
+              }
+            ]
+          },
+          {
+            "title": "🔒 セキュリティチェック",
+            "icon": "🔒",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "echo $PATH",
+                "output": "/usr/local/bin:/usr/bin:/bin",
+                "note": "実行可能ファイルのパスを確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ 今すぐスタート！",
+        "sections": [
+          {
+            "title": "🎮 実践体験",
+            "icon": "🎮",
+            "type": "text",
+            "content": "次の画面では実際にコマンドを入力して、Linuxとの最初の対話を体験します。"
+          },
+          {
+            "title": "🤝 サポート",
+            "icon": "🤝",
+            "type": "text",
+            "content": "間違えても大丈夫。ヒント機能があるので安心して進められます。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「黒い画面って意外と簡単じゃん！」と思えるようになること"
+          }
+        ]
+      }
+    ]
+  },
+  "day2": {
+    "title": "🏗️ デジタル世界の住所システム",
+    "highlight": "年収1000万円のプロが毎日使う「場所の概念」",
+    "slides": [
+      {
+        "title": "🏗️ デジタル世界の住所システム",
+        "highlight": "年収1000万円のプロが毎日使う「場所の概念」",
+        "sections": [
+          {
+            "title": "💼 プロの基本ツール",
+            "icon": "💼",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir",
+                "description": "新しい作業スペースを作る"
+              },
+              {
+                "command": "cd",
+                "description": "目的の場所に移動する"
+              },
+              {
+                "command": "touch",
+                "description": "新しいファイルを作成する"
+              }
+            ]
+          },
+          {
+            "title": "🔍 なぜ重要？",
+            "icon": "🔍",
+            "type": "list",
+            "items": [
+              "プロジェクト管理の基盤スキル",
+              "チーム開発での共通言語",
+              "自動化スクリプトの基礎知識"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎯 プロジェクト作成の実際",
+        "sections": [
+          {
+            "title": "📁 プロジェクト構築シーン",
+            "icon": "📁",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "mkdir my-project",
+                "note": "新しいプロジェクトフォルダを作成"
+              },
+              {
+                "command": "cd my-project",
+                "note": "作成したプロジェクトに移動"
+              },
+              {
+                "command": "mkdir src docs tests",
+                "note": "必要なサブフォルダを一気に作成"
+              },
+              {
+                "command": "touch README.md",
+                "note": "プロジェクトの説明ファイルを作成"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 実践タイム！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "実際にフォルダを作成し、ファイルシステムを操作してみましょう。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「プロジェクト管理ってこういうことか！」と理解すること"
+          }
+        ]
+      }
+    ]
+  },
+  "day3": {
+    "title": "🔍 デジタル考古学者への道",
+    "highlight": "ログ解析で年収1200万円エンジニアの必須スキル",
+    "slides": [
+      {
+        "title": "🔍 デジタル考古学者への道",
+        "highlight": "ログ解析で年収1200万円エンジニアの必須スキル",
+        "sections": [
+          {
+            "title": "⚡ プロの調査ツール",
+            "icon": "⚡",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "cat",
+                "description": "ファイルの中身を確認"
+              },
+              {
+                "command": "less",
+                "description": "大きなファイルをページごとに表示"
+              },
+              {
+                "command": "head",
+                "description": "ファイルの最初の部分を表示"
+              },
+              {
+                "command": "tail",
+                "description": "ファイルの最後の部分を表示"
+              }
+            ]
+          },
+          {
+            "title": "💎 プロの価値",
+            "icon": "💎",
+            "type": "list",
+            "items": [
+              "システム障害の原因調査",
+              "セキュリティインシデント対応",
+              "パフォーマンス分析・最適化"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔥 実際の障害対応シーン",
+        "sections": [
+          {
+            "title": "🚨 緊急対応の現場",
+            "icon": "🚨",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "tail -f /var/log/nginx/error.log",
+                "note": "リアルタイムでエラーログを監視"
+              },
+              {
+                "command": "head -20 application.log",
+                "note": "エラーの最初の発生状況を確認"
+              },
+              {
+                "command": "less +G large-log.txt",
+                "note": "巨大ログファイルの最後から確認"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎯 実践開始！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "ファイルの中身を確認する様々な方法を実際に試してみます。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「ファイルの中身がこんなに簡単に見れるんだ！」と実感すること"
+          }
+        ]
+      }
+    ]
+  },
+  "day4": {
+    "title": "🛡️ セキュリティの守護者への道",
+    "highlight": "年収1500万円の上級エンジニアが扱うセキュリティ基盤技術",
+    "slides": [
+      {
+        "title": "🛡️ セキュリティの守護者への道",
+        "highlight": "年収1500万円の上級エンジニアが扱うセキュリティ基盤技術",
+        "sections": [
+          {
+            "title": "🔒 セキュリティの基盤",
+            "icon": "🔒",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "ls -l",
+                "description": "ファイルの詳細情報と権限を表示"
+              },
+              {
+                "command": "chmod",
+                "description": "ファイルの権限を変更"
+              },
+              {
+                "command": "chown",
+                "description": "ファイルの所有者を変更"
+              }
+            ]
+          },
+          {
+            "title": "💼 プロの価値",
+            "icon": "💼",
+            "type": "list",
+            "items": [
+              "Webサーバーのセキュリティ設定",
+              "機密ファイルのアクセス制御",
+              "システム管理者レベルの知識"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔥 セキュリティ設定の実際",
+        "sections": [
+          {
+            "title": "🌐 Web開発の現場",
+            "icon": "🌐",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "chmod 644 *.html",
+                "note": "HTMLファイルを読み取り専用に設定"
+              },
+              {
+                "command": "chmod 755 cgi-bin/",
+                "note": "スクリプトディレクトリに実行権限付与"
+              },
+              {
+                "command": "chmod 600 config/database.conf",
+                "note": "データベース設定を所有者のみアクセス可能に"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ セキュリティマスターへ！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "ファイルの権限を確認し、セキュリティを意識した設定を体験します。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「セキュリティって意外と身近なんだ！」と理解すること"
+          }
+        ]
+      }
+    ]
+  },
+  "day5": {
+    "title": "📖 テキストマスターへの道",
+    "highlight": "データ分析で年収1200万円エンジニアの必須スキル",
+    "slides": [
+      {
+        "title": "📖 テキストマスターへの道",
+        "highlight": "データ分析で年収1200万円エンジニアの必須スキル",
+        "sections": [
+          {
+            "title": "📋 テキスト操作の核心",
+            "icon": "📋",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "cat",
+                "description": "ファイル内容を一度に表示"
+              },
+              {
+                "command": "less",
+                "description": "大きなファイルをページ単位で表示"
+              },
+              {
+                "command": "more",
+                "description": "ファイルを順次表示"
+              }
+            ]
+          },
+          {
+            "title": "💡 実務での価値",
+            "icon": "💡",
+            "type": "list",
+            "items": [
+              "設定ファイルの内容確認",
+              "ログファイルの詳細分析",
+              "データファイルの構造把握"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🔍 実際の分析作業",
+        "sections": [
+          {
+            "title": "📊 データ分析シーン",
+            "icon": "📊",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "cat config.json",
+                "output": "{\n  \"database\": \"mysql\",\n  \"port\": 3306\n}",
+                "note": "設定ファイルの構造を確認"
+              },
+              {
+                "command": "less /var/log/access.log",
+                "note": "大量のアクセスログを効率的に確認"
+              },
+              {
+                "command": "cat /etc/passwd | head -5",
+                "note": "システムユーザー情報の最初の5行を表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 テキスト分析開始！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "様々な方法でファイルの中身を確認し、効率的な読み方を身につけます。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「ファイルの中身がこんなに詳しく見れるんだ！」と発見すること"
+          }
+        ]
+      }
+    ]
+  },
+  "day6": {
+    "title": "⚙️ システム管理者への道",
+    "highlight": "インフラエンジニア年収1300万円の基盤技術",
+    "slides": [
+      {
+        "title": "⚙️ システム管理者への道",
+        "highlight": "インフラエンジニア年収1300万円の基盤技術",
+        "sections": [
+          {
+            "title": "🔧 システム管理の核心",
+            "icon": "🔧",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "sudo apt update",
+                "description": "パッケージリストを最新に更新"
+              },
+              {
+                "command": "apt list --upgradable",
+                "description": "アップデート可能なパッケージを確認"
+              },
+              {
+                "command": "sudo apt install",
+                "description": "新しいソフトウェアをインストール"
+              }
+            ]
+          },
+          {
+            "title": "💎 プロの価値",
+            "icon": "💎",
+            "type": "list",
+            "items": [
+              "サーバーのセキュリティアップデート",
+              "新機能の導入・展開",
+              "システムの安定運用維持"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🌐 本番環境の管理",
+        "sections": [
+          {
+            "title": "🚀 サーバー運用シーン",
+            "icon": "🚀",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "sudo apt update",
+                "output": "Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease\nReading package lists... Done",
+                "note": "パッケージ情報を最新に更新"
+              },
+              {
+                "command": "sudo apt upgrade",
+                "note": "システム全体のセキュリティ更新"
+              },
+              {
+                "command": "sudo apt install nginx",
+                "note": "Webサーバーの新規インストール"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ システム管理体験！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "パッケージ管理システムを使って、システムのアップデートを体験します。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「システム管理ってこうやるんだ！」と理解すること"
+          }
+        ]
+      }
+    ]
+  },
+  "day7": {
+    "title": "🤖 自動化マスターへの道",
+    "highlight": "DevOpsエンジニア年収1400万円への第一歩",
+    "slides": [
+      {
+        "title": "🤖 自動化マスターへの道",
+        "highlight": "DevOpsエンジニア年収1400万円への第一歩",
+        "sections": [
+          {
+            "title": "⏰ 時間操作の基本",
+            "icon": "⏰",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "date",
+                "description": "現在の日時を表示"
+              },
+              {
+                "command": "date '+%Y-%m-%d %H:%M:%S'",
+                "description": "カスタム形式で日時を表示"
+              },
+              {
+                "command": "uptime",
+                "description": "システムの稼働時間を確認"
+              }
+            ]
+          },
+          {
+            "title": "🚀 自動化の価値",
+            "icon": "🚀",
+            "type": "list",
+            "items": [
+              "スクリプトでのタイムスタンプ記録",
+              "定期実行ジョブのスケジューリング",
+              "システム監視とログ管理"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "📅 実際の自動化シーン",
+        "sections": [
+          {
+            "title": "🔄 自動化スクリプト",
+            "icon": "🔄",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "date",
+                "output": "Wed Aug  5 14:30:25 JST 2025",
+                "note": "現在の日時を確認"
+              },
+              {
+                "command": "echo \"Backup completed at $(date)\" >> backup.log",
+                "note": "バックアップ完了をログに記録"
+              },
+              {
+                "command": "date '+%Y%m%d_%H%M%S'",
+                "output": "20250805_143025",
+                "note": "ファイル名に使用する形式"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "⚡ 自動化の世界へ！",
+        "sections": [
+          {
+            "title": "🎮 体験内容",
+            "icon": "🎮",
+            "type": "text",
+            "content": "日時コマンドを使って、自動化スクリプトの基礎を体験します。"
+          },
+          {
+            "title": "🎯 今日の目標",
+            "icon": "🎯",
+            "type": "text",
+            "content": "「自動化の仕組みが見えてきた！」と感じること"
+          }
+        ]
+      }
+    ]
+  },
+  "day8": {
+    "title": "🏆 Linux Quest 完全制覇",
+    "highlight": "あなたは今、年収アップの武器を手に入れた",
+    "slides": [
+      {
+        "title": "🏆 Linux Quest 完全制覇",
+        "highlight": "あなたは今、年収アップの武器を手に入れた",
+        "sections": [
+          {
+            "title": "🎯 最終実技テスト",
+            "icon": "🎯",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir",
+                "description": "プロジェクトフォルダ作成"
+              },
+              {
+                "command": "cd",
+                "description": "ディレクトリ移動"
+              },
+              {
+                "command": "ls",
+                "description": "内容確認"
+              }
+            ]
+          },
+          {
+            "title": "💎 習得したスキル",
+            "icon": "💎",
+            "type": "list",
+            "items": [
+              "ターミナル操作の基礎",
+              "ファイル・ディレクトリ管理",
+              "権限とセキュリティ意識",
+              "システム管理の基本概念"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🚀 次のステップ",
+        "sections": [
+          {
+            "title": "📈 キャリアアップの道筋",
+            "icon": "📈",
+            "type": "list",
+            "items": [
+              "Webサーバー管理 (年収800万円〜)",
+              "クラウドインフラ設計 (年収1000万円〜)",
+              "DevOps・自動化エンジニア (年収1200万円〜)",
+              "セキュリティエンジニア (年収1500万円〜)"
+            ]
+          },
+          {
+            "title": "🎓 学習リソース",
+            "icon": "🎓",
+            "type": "examples",
+            "examples": [
+              {
+                "command": "man ls",
+                "note": "各コマンドの詳細マニュアルを確認"
+              },
+              {
+                "command": "ls --help",
+                "note": "コマンドのヘルプを表示"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "🎉 おめでとうございます！",
+        "sections": [
+          {
+            "title": "🎮 最終チャレンジ",
+            "icon": "🎮",
+            "type": "text",
+            "content": "学んだスキルを組み合わせて、プロジェクトフォルダを作成してみましょう。"
+          },
+          {
+            "title": "🌟 あなたの成果",
+            "icon": "🌟",
+            "type": "text",
+            "content": "8日間でLinuxの基礎をマスター。これであなたもLinux使いの仲間入りです！"
+          },
+          {
+            "title": "🚀 未来への扉",
+            "icon": "🚀",
+            "type": "text",
+            "content": "今日学んだスキルは、あなたのエンジニアキャリアの強力な武器になります。"
+          }
+        ]
+      }
+    ]
+  }
+}

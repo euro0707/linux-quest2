@@ -1,0 +1,74 @@
+[
+  {
+    "day": 1,
+    "title": "Linuxとは何か？",
+    "story": "ようこそLinux Quest！あなたは今、強力なLinuxの世界への扉を開こうとしています。",
+    "challenge_text": "まず基本から。現在のディレクトリを確認するコマンドを入力してください。",
+    "expected_commands": ["pwd"],
+    "followup": "正解！pwdコマンドで現在のディレクトリパスを確認できます。",
+    "real_world_use": "サーバー作業で自分の位置を把握するのに毎日使う基本コマンドです。"
+  },
+  {
+    "day": 2,
+    "title": "コマンドの基本",
+    "story": "Linux Quest Day2！コマンドライン操作の基礎を身につけましょう。",
+    "challenge_text": "現在のディレクトリにあるファイルとフォルダを一覧表示してください。",
+    "expected_commands": ["ls", "ls -l", "ls -la"],
+    "followup": "素晴らしい！lsコマンドでディレクトリの中身を確認できます。",
+    "real_world_use": "ファイル管理やサーバー運用で最も頻繁に使用するコマンドの一つです。"
+  },
+  {
+    "day": 3,
+    "title": "ファイル操作",
+    "story": "Day3では実際にファイルを作成・操作してみましょう！",
+    "challenge_text": "新しいファイル 'quest.txt' を作成してください。",
+    "expected_commands": ["touch quest.txt", "touch ./quest.txt"],
+    "followup": "完璧！touchコマンドで空のファイルを作成できました。",
+    "real_world_use": "ログファイルの作成やプレースホルダーファイルの生成に使用します。"
+  },
+  {
+    "day": 4,
+    "title": "権限と所有者",
+    "story": "Day4はLinuxの権限システムについて学びます。セキュリティの基本です！",
+    "challenge_text": "quest.txtファイルの詳細な権限情報を表示してください。",
+    "expected_commands": ["ls -l quest.txt", "ls -l ./quest.txt", "ls -la quest.txt"],
+    "followup": "よくできました！ファイルの権限と所有者情報を確認できます。",
+    "real_world_use": "サーバーのセキュリティ管理やファイルアクセス制御に不可欠です。"
+  },
+  {
+    "day": 5,
+    "title": "テキスト操作",
+    "story": "Day5ではテキストファイルの中身を確認する方法を学びます。",
+    "challenge_text": "quest.txtファイルの中身を表示してください。",
+    "expected_commands": ["cat quest.txt", "cat ./quest.txt", "less quest.txt", "more quest.txt"],
+    "followup": "素晴らしい！ファイルの内容を表示できました。",
+    "real_world_use": "ログファイルの確認や設定ファイルの内容チェックに毎日使用します。"
+  },
+  {
+    "day": 6,
+    "title": "パッケージ管理",
+    "story": "Day6はソフトウェアのインストールについて学びましょう。",
+    "challenge_text": "パッケージリストを更新するコマンドを入力してください（Ubuntu/Debian系）。",
+    "expected_commands": ["sudo apt update", "apt update"],
+    "followup": "正解！パッケージリストを最新の状態に更新できます。",
+    "real_world_use": "サーバーのメンテナンスやソフトウェア管理で必須の作業です。"
+  },
+  {
+    "day": 7,
+    "title": "シェルスクリプト入門",
+    "story": "Day7では自動化の第一歩、シェルスクリプトについて学びます。",
+    "challenge_text": "現在の日時を表示するコマンドを入力してください。",
+    "expected_commands": ["date"],
+    "followup": "完璧！dateコマンドで現在の日時を表示できます。",
+    "real_world_use": "ログファイルのタイムスタンプやスクリプトでの日時記録に使用します。"
+  },
+  {
+    "day": 8,
+    "title": "総復習クエスト",
+    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。",
+    "challenge_text": "新しいディレクトリ 'linux-master' を作成してください。",
+    "expected_commands": ["mkdir linux-master", "mkdir ./linux-master"],
+    "followup": "🎉 Linux Quest完走おめでとうございます！あなたはLinuxの基礎を身につけました！",
+    "real_world_use": "これでLinuxサーバーの基本操作ができるようになりました。実際の開発や運用に活かしてください！"
+  }
+]
