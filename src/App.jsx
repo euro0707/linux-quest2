@@ -69,6 +69,15 @@ function App() {
     setSelectedDay(dayIndex);
     // スライドが完了済みの場合は直接ゲーム画面へ、未完了の場合はスライドから開始
     const dayKey = `day${dayIndex + 1}`;
+    
+    console.log('Day selection:', {
+      dayIndex: dayIndex + 1,
+      dayKey,
+      slideProgress,
+      isSlideCompleted: slideProgress[dayKey],
+      willGoTo: slideProgress[dayKey] ? 'day' : 'slide'
+    });
+    
     if (slideProgress[dayKey]) {
       setCurrentScreen('day');
     } else {
@@ -114,10 +123,12 @@ function App() {
 
   const handleProgressReset = () => {
     try {
+      // 状態を完全にリセット
       setUnlockedDays(0);
       setSelectedDay(0);
       setSlideProgress({});
       
+      // ストレージをクリア
       removeFromStorage('linuxQuest_slideProgress');
       removeFromStorage('linuxQuest_currentDay');
       removeFromStorage('linuxQuest_mistakes');
@@ -125,7 +136,10 @@ function App() {
       // カスタムイベントを発火して統計表示を更新
       window.dispatchEvent(new CustomEvent('linuxQuestDataUpdate'));
       
+      // 選択画面に戻る
       setCurrentScreen('select');
+      
+      console.log('Progress reset completed. slideProgress:', {});
     } catch (err) {
       console.error('Error resetting progress:', err);
     }
