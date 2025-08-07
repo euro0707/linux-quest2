@@ -86,6 +86,9 @@ function App() {
         console.warn('Failed to save slide progress');
       }
       
+      // 統計更新のイベントを発火
+      window.dispatchEvent(new CustomEvent('linuxQuestDataUpdate'));
+      
       setCurrentScreen('day');
     } catch (err) {
       console.error('Error completing slide:', err);
@@ -118,6 +121,9 @@ function App() {
       removeFromStorage('linuxQuest_slideProgress');
       removeFromStorage('linuxQuest_currentDay');
       removeFromStorage('linuxQuest_mistakes');
+      
+      // カスタムイベントを発火して統計表示を更新
+      window.dispatchEvent(new CustomEvent('linuxQuestDataUpdate'));
       
       setCurrentScreen('select');
     } catch (err) {

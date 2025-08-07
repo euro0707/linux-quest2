@@ -24,6 +24,10 @@ export default function DayScreen({ day, onNext }) {
         if (!setToStorage("linuxQuest_currentDay", String(day.day))) {
           console.warn("Failed to save progress");
         }
+        
+        // 統計更新のイベントを発火
+        window.dispatchEvent(new CustomEvent('linuxQuestDataUpdate'));
+        
         setHint("");
       } else {
         // ミスを記録

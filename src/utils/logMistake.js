@@ -46,6 +46,11 @@ export function logMistake(userInput, dayNumber, expectedCommands) {
       console.error('Failed to save mistake log');
     } else {
       console.log('Mistake logged:', mistake);
+      
+      // 統計更新のイベントを発火
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('linuxQuestDataUpdate'));
+      }
     }
   } catch (error) {
     console.error('Error logging mistake:', error);

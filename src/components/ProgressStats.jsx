@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getFromStorage } from '../utils/storage';
 
 export default function ProgressStats() {
   const [stats, setStats] = useState({
@@ -8,20 +9,56 @@ export default function ProgressStats() {
     accuracy: 100
   });
 
+  const calculateStats = () => {
+    try {
+      const mistakes = getFromStorage('linuxQuest_mistakes', []);
+      const currentDay = parseInt(getFromStorage('linuxQuest_currentDay', '0'));
+      
+      // データ検証
+      const validMistakes = Array.isArray(mistakes) ? mistakes.filter(m => m && typeof m.attempts === 'number') : [];
+      
+      const totalMistakes = validMistakes.reduce((sum, m) => sum + m.attempts, 0);
+      const totalAttempts = totalMistakes + Math.max(currentDay, 1);
+      const accuracy = totalAttempts > 0 ? Math.round(((totalAttempts - totalMistakes) / totalAttempts) * 100) : 100;
+      
+      setStats({
+        totalAttempts,
+        totalMistakes,
+        completedDays: currentDay,
+        accuracy
+      });
+    } catch (error) {
+      console.error('Error calculating stats:', error);
+      // エラー時はデフォルト値を設定
+      setStats({
+        totalAttempts: 0,
+        totalMistakes: 0,
+        completedDays: 0,
+        accuracy: 100
+      });
+    }
+  };
+
   useEffect(() => {
-    const mistakes = JSON.parse(localStorage.getItem('linuxQuest_mistakes') || '[]');
-    const currentDay = parseInt(localStorage.getItem('linuxQuest_currentDay') || '0');
+    calculateStats();
     
-    const totalMistakes = mistakes.reduce((sum, m) => sum + m.attempts, 0);
-    const totalAttempts = totalMistakes + Math.max(currentDay, 1);
-    const accuracy = totalAttempts > 0 ? Math.round(((totalAttempts - totalMistakes) / totalAttempts) * 100) : 100;
+    // ストレージ変更を監視してリアルタイム更新
+    const handleStorageChange = (e) => {
+      if (e.key && (e.key.startsWith('linuxQuest_'))) {
+        calculateStats();
+      }
+    };
     
-    setStats({
-      totalAttempts,
-      totalMistakes,
-      completedDays: currentDay,
-      accuracy
-    });
+    window.addEventListener('storage', handleStorageChange);
+    
+    // カスタムイベントでの更新も監視（同一タブ内での変更用）
+    const handleCustomUpdate = () => calculateStats();
+    window.addEventListener('linuxQuestDataUpdate', handleCustomUpdate);
+    
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('linuxQuestDataUpdate', handleCustomUpdate);
+    };
   }, []);
 
   return (
