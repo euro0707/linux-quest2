@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import { getFromStorage, removeFromStorage } from '../utils/storage';
 
 export default function SettingsPanel({ onProgressReset }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleResetProgress = () => {
     if (window.confirm('学習進捗をリセットしますか？この操作は元に戻せません。')) {
-      localStorage.removeItem('linuxQuest_currentDay');
-      localStorage.removeItem('linuxQuest_mistakes');
+      // 安全にデータを削除
+      removeFromStorage('linuxQuest_currentDay');
+      removeFromStorage('linuxQuest_mistakes');
+      removeFromStorage('linuxQuest_slideProgress');
+      
+      // 親コンポーネントのリセット処理を呼び出し
       onProgressReset();
       setIsOpen(false);
       alert('学習進捗がリセットされました！');
@@ -14,27 +19,32 @@ export default function SettingsPanel({ onProgressReset }) {
   };
 
   const exportData = () => {
-    const mistakes = JSON.parse(localStorage.getItem('linuxQuest_mistakes') || '[]');
-    const currentDay = localStorage.getItem('linuxQuest_currentDay') || '0';
+    try {
+      const mistakes = getFromStorage('linuxQuest_mistakes', []);
+      const currentDay = getFromStorage('linuxQuest_currentDay', '0');
     
-    const exportData = {
-      currentDay: parseInt(currentDay),
-      mistakes: mistakes,
-      exportDate: new Date().toISOString(),
-      version: '1.0.0'
-    };
-    
-    const dataStr = JSON.stringify(exportData, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `linux-quest-progress-${new Date().toISOString().split('T')[0]}.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+      const exportData = {
+        currentDay: parseInt(currentDay),
+        mistakes: mistakes,
+        exportDate: new Date().toISOString(),
+        version: '1.0.0'
+      };
+      
+      const dataStr = JSON.stringify(exportData, null, 2);
+      const dataBlob = new Blob([dataStr], { type: 'application/json' });
+      const url = URL.createObjectURL(dataBlob);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `linux-quest-progress-${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error exporting data:', error);
+      alert('データのエクスポートに失敗しました。');
+    }
   };
 
   return (
