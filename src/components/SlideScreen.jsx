@@ -52,7 +52,7 @@ export default function SlideScreen({ day, onComplete, onBack }) {
             className="text-gray-400 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
             aria-label="チャプター選択に戻る"
           >
-            ← 戻る
+            ✕ 終了
           </button>
         </div>
         <div 
@@ -155,18 +155,17 @@ export default function SlideScreen({ day, onComplete, onBack }) {
 
         {/* ナビゲーション */}
         <nav className="flex justify-between items-center mt-8 pt-6 border-t border-gray-700" aria-label="スライドナビゲーション">
-          <button
-            onClick={handlePrevious}
-            disabled={currentSlide === 0}
-            className={`px-4 py-2 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 ${
-              currentSlide === 0
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed focus:ring-gray-500'
-                : 'bg-gray-600 hover:bg-gray-500 text-white focus:ring-gray-400'
-            }`}
-            aria-label="前のスライドに戻る"
-          >
-            ← 前へ
-          </button>
+          {currentSlide > 0 ? (
+            <button
+              onClick={handlePrevious}
+              className="px-4 py-2 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 bg-gray-600 hover:bg-gray-500 text-white focus:ring-gray-400"
+              aria-label="前のスライドに戻る"
+            >
+              ← 前へ
+            </button>
+          ) : (
+            <div></div> // 空のスペースを確保してレイアウトを保持
+          )}
 
           {/* スライドインジケーター */}
           <div className="flex space-x-2" role="tablist" aria-label="スライド選択">
