@@ -207,6 +207,6 @@ export default function SlideScreen({ day, onComplete, onBack }) {
       <div className="mt-4 text-center text-xs text-gray-500">
         ⌨️ キーボード操作: [←][→] スライド移動 | [ESC] 戻る | [SPACE] 次へ
       </div>
-    </div>
+    </main>
   );
 }
