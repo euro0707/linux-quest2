@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import DOMPurify from 'dompurify';
 
 export default function SlideScreen({ day, onComplete, onBack }) {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -1,4 +1,7 @@
-import data from "../data/linux_quest_data.json";
+import dataObj from "../data/integrated_linux_quest_data.json";
+
+// オブジェクト形式のデータを配列に変換
+const data = Object.values(dataObj);
 
 export default function ChapterSelect({ currentDay, onSelectDay }) {
   const totalDays = data.length;
