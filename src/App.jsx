@@ -70,13 +70,6 @@ function App() {
     // スライドが完了済みの場合は直接ゲーム画面へ、未完了の場合はスライドから開始
     const dayKey = `day${dayIndex + 1}`;
     
-    console.log('Day selection:', {
-      dayIndex: dayIndex + 1,
-      dayKey,
-      slideProgress,
-      isSlideCompleted: slideProgress[dayKey],
-      willGoTo: slideProgress[dayKey] ? 'day' : 'slide'
-    });
     
     if (slideProgress[dayKey]) {
       setCurrentScreen('day');
@@ -139,7 +132,6 @@ function App() {
       // 選択画面に戻る
       setCurrentScreen('select');
       
-      console.log('Progress reset completed. slideProgress:', {});
     } catch (err) {
       console.error('Error resetting progress:', err);
     }

@@ -3,9 +3,6 @@ import { getFromStorage, removeFromStorage } from '../utils/storage';
 
 export default function SettingsPanel({ onProgressReset }) {
   const [isOpen, setIsOpen] = useState(false);
-  
-  // デバッグ用：コンソールに表示確認
-  console.log('SettingsPanel rendered');
 
   const handleResetProgress = () => {
     if (window.confirm('学習進捗をリセットしますか？この操作は元に戻せません。')) {
@@ -52,8 +49,7 @@ export default function SettingsPanel({ onProgressReset }) {
 
   try {
     return (
-      <div className="mt-4 border border-gray-600 rounded p-2">
-        <div className="text-xs text-gray-500 mb-1">設定パネル (テスト表示)</div>
+      <div className="mt-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-gray-400 hover:text-white text-sm flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
