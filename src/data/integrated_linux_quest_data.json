@@ -421,8 +421,12 @@
             "type": "commands",
             "commands": [
               {
-                "command": "mkdir",
-                "description": "プロジェクトフォルダ作成"
+                "command": "複数コマンド連携",
+                "description": "4つのコマンドを && で連携実行"
+              },
+              {
+                "command": "mkdir + touch + ls + date",
+                "description": "実際の開発現場でよく使う作業パターン"
               }
             ]
           }
@@ -497,16 +501,15 @@
         ]
       }
     ],
-    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。複数のコマンドを組み合わせて課題をクリアしましょう。",
-    "challenge_text": "段階1: まず 'linux-quest' ディレクトリを作成してください。",
-    "expected_commands": ["mkdir linux-quest", "mkdir ./linux-quest"],
-    "followup": "素晴らしい！次に段階2へ進みます。その中に 'completed.txt' ファイルを作成してください。",
-    "challenge_text_2": "段階2: linux-quest ディレクトリ内に 'completed.txt' ファイルを作成してください。",
-    "expected_commands_2": ["touch linux-quest/completed.txt", "touch ./linux-quest/completed.txt"],
-    "followup_2": "完璧です！最後の段階3へ。作成したファイルの存在を確認してください。",
-    "challenge_text_3": "段階3: linux-quest ディレクトリの中身を確認してください。",
-    "expected_commands_3": ["ls linux-quest", "ls ./linux-quest", "ls -l linux-quest", "ls -l ./linux-quest"],
-    "followup_3": "🎉 Linux Quest完走おめでとうございます！7日間で学んだコマンドを見事に使いこなしました！",
+    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。実際の開発現場でよく行う作業を一連で実行しましょう。",
+    "challenge_text": "【最終試験】プロジェクト作成から完了記録まで、4つのコマンドを連携して実行してください：\n\n1️⃣ プロジェクトフォルダ作成 (mkdir)\n2️⃣ READMEファイル作成 (touch)\n3️⃣ 内容確認 (ls)\n4️⃣ 作業完了時刻記録 (date)\n\n💡 ヒント: && で複数コマンドを連携できます",
+    "expected_commands": [
+      "mkdir project && touch project/README.md && ls -la project && date",
+      "mkdir project && touch project/README.md && ls -l project && date",
+      "mkdir project; touch project/README.md; ls -la project; date",
+      "mkdir project; touch project/README.md; ls -l project; date"
+    ],
+    "followup": "🎉 素晴らしい！実際のLinux現場でよく使われる複合コマンドを完璧にマスターしました。これであなたも立派なLinux使いです！",
     "real_world_use": "これでLinuxサーバーの基本操作ができるようになりました。実際の開発や運用に活かしてください！"
   }
 }

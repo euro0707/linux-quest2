@@ -28,6 +28,10 @@ const COMMAND_HINTS = {
   yum: "パッケージ管理システムのコマンドを考えてみてください。",
   npm: "Node.jsパッケージ管理コマンドを考えてみてください。",
   git: "バージョン管理システムのコマンドを考えてみてください。",
+  
+  // Day8 複合コマンド用ヒント
+  "mkdir project && touch project/README.md && ls -la project && date": "4つのコマンドを && で連携してください：mkdir → touch → ls → date",
+  "mkdir project && touch project/README.md && ls -l project && date": "4つのコマンドを && で連携してください：mkdir → touch → ls → date",
   ssh: "リモート接続するコマンドを考えてみてください。",
   scp: "ファイルを安全にコピーするコマンドを考えてみてください。",
   tar: "アーカイブを操作するコマンドを考えてみてください。",
@@ -175,8 +179,15 @@ function generateHint(normalizedInput, expectedCommands) {
   // 一般的なヒント
   const expectedCommand = expectedCommands[0];
   if (expectedCommand) {
+    // 複合コマンド全体をまずチェック
+    let hint = COMMAND_HINTS[expectedCommand];
+    if (hint) {
+      return hint;
+    }
+    
+    // 複合コマンド全体がない場合、最初のコマンドをチェック
     const commandName = expectedCommand.split(' ')[0];
-    const hint = COMMAND_HINTS[commandName];
+    hint = COMMAND_HINTS[commandName];
     if (hint) {
       return hint;
     }
