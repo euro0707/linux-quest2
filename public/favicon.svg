@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#1e3a8a" rx="6"/>
+  
+  <!-- Terminal icon -->
+  <rect x="4" y="8" width="24" height="16" fill="#111827" rx="2"/>
+  
+  <!-- Cursor -->
+  <rect x="6" y="10" width="1" height="2" fill="#10b981"/>
+  
+  <!-- Command prompt -->
+  <text x="8" y="13" fill="#10b981" font-family="Monaco, monospace" font-size="3" font-weight="bold">$</text>
+  
+  <!-- Linux symbol -->
+  <circle cx="24" cy="6" r="2" fill="#f59e0b"/>
+  <text x="24" y="8" text-anchor="middle" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="2" font-weight="bold">L</text>
+</svg>
