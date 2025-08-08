@@ -475,21 +475,38 @@
         ]
       },
       {
-        "title": "🎉 おめでとうございます！",
+        "title": "⚔️ 最終試験",
+        "highlight": "あなたの実力を証明する時",
         "sections": [
           {
-            "title": "🌟 あなたの成果",
-            "icon": "🌟",
+            "title": "🎯 準備完了",
+            "icon": "🎯", 
             "type": "text",
-            "content": "8日間でLinuxの基礎をマスター。これであなたもLinux使いの仲間入りです！"
+            "content": "8日間の学習の成果を試す時が来ました。最後のチャレンジであなたの実力を証明しましょう！"
+          },
+          {
+            "title": "💪 心構え",
+            "icon": "💪",
+            "type": "list",
+            "items": [
+              "落ち着いて、学んだことを思い出そう",
+              "間違えても大丈夫、何度でも挑戦できる",
+              "あなたならきっとできる！"
+            ]
           }
         ]
       }
     ],
-    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。",
-    "challenge_text": "新しいディレクトリ 'linux-master' を作成してください。",
-    "expected_commands": ["mkdir linux-master", "mkdir ./linux-master"],
-    "followup": "🎉 Linux Quest完走おめでとうございます！あなたはLinuxの基礎を身につけました！",
+    "story": "おめでとうございます！最終日は今まで学んだことの総復習です。複数のコマンドを組み合わせて課題をクリアしましょう。",
+    "challenge_text": "段階1: まず 'linux-quest' ディレクトリを作成してください。",
+    "expected_commands": ["mkdir linux-quest", "mkdir ./linux-quest"],
+    "followup": "素晴らしい！次に段階2へ進みます。その中に 'completed.txt' ファイルを作成してください。",
+    "challenge_text_2": "段階2: linux-quest ディレクトリ内に 'completed.txt' ファイルを作成してください。",
+    "expected_commands_2": ["touch linux-quest/completed.txt", "touch ./linux-quest/completed.txt"],
+    "followup_2": "完璧です！最後の段階3へ。作成したファイルの存在を確認してください。",
+    "challenge_text_3": "段階3: linux-quest ディレクトリの中身を確認してください。",
+    "expected_commands_3": ["ls linux-quest", "ls ./linux-quest", "ls -l linux-quest", "ls -l ./linux-quest"],
+    "followup_3": "🎉 Linux Quest完走おめでとうございます！7日間で学んだコマンドを見事に使いこなしました！",
     "real_world_use": "これでLinuxサーバーの基本操作ができるようになりました。実際の開発や運用に活かしてください！"
   }
 }

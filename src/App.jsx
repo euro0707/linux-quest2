@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import OpeningScreen from './components/OpeningScreen';
 import ChapterSelect from './components/ChapterSelect';
 import SlideScreen from './components/SlideScreen';
 import DayScreen from './components/DayScreen';
@@ -9,7 +10,7 @@ import { getFromStorage, setToStorage, removeFromStorage } from './utils/storage
 import data from './data/integrated_linux_quest_data.json';
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState('select'); // 'select', 'slide', or 'day'
+  const [currentScreen, setCurrentScreen] = useState('opening'); // 'opening', 'select', 'slide', or 'day'
   const [selectedDay, setSelectedDay] = useState(0);
   const [unlockedDays, setUnlockedDays] = useState(0);
   const [slideProgress, setSlideProgress] = useState({});
@@ -34,6 +35,16 @@ function App() {
       const totalDays = Object.keys(data).length;
       if (totalDays === 0) {
         throw new Error('学習コンテンツが見つかりません');
+      }
+
+      // 初回訪問判定
+      const hasVisited = getFromStorage('linuxQuest_hasVisited', false);
+      if (hasVisited) {
+        // 既存ユーザーは直接チャプター選択へ
+        setCurrentScreen('select');
+      } else {
+        // 新規ユーザーはオープニング画面
+        setCurrentScreen('opening');
       }
 
       // ローカルストレージから進捗を安全に読み込み
@@ -63,6 +74,13 @@ function App() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleStartQuest = () => {
+    // 初回訪問済みをマーク
+    setToStorage('linuxQuest_hasVisited', true);
+    // チャプター選択画面へ
+    setCurrentScreen('select');
   };
 
   const handleSelectDay = (dayIndex) => {
@@ -165,21 +183,25 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-4 flex items-center justify-center">
-      <SkipLink targetId="main-content">メインコンテンツにスキップ</SkipLink>
-      <div className="w-full max-w-4xl" id="main-content">
-        {/* ヘッダー */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-            🚀 Linux Quest
-          </h1>
-          <p className="text-gray-300 text-sm sm:text-base">
-            稼げる武器を手に入れる7日間
-          </p>
-        </div>
+    <>
+      {currentScreen === 'opening' ? (
+        <OpeningScreen onStart={handleStartQuest} />
+      ) : (
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-4 flex items-center justify-center">
+          <SkipLink targetId="main-content">メインコンテンツにスキップ</SkipLink>
+          <div className="w-full max-w-4xl" id="main-content">
+            {/* ヘッダー */}
+            <div className="text-center mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                🚀 Linux Quest
+              </h1>
+              <p className="text-gray-300 text-sm sm:text-base">
+                稼げる武器を手に入れる7日間
+              </p>
+            </div>
 
-        {/* メインコンテンツ */}
-        {currentScreen === 'select' ? (
+            {/* メインコンテンツ */}
+            {currentScreen === 'select' ? (
           <div>
             <ChapterSelect 
               currentDay={unlockedDays} 
@@ -230,12 +252,14 @@ function App() {
           </div>
         )}
 
-        {/* フッター */}
-        <div className="mt-8 text-center text-gray-500 text-xs">
-          <p>Linux Quest - Built with React & Tailwind CSS</p>
+            {/* フッター */}
+            <div className="mt-8 text-center text-gray-500 text-xs">
+              <p>Linux Quest - Built with React & Tailwind CSS</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
