@@ -433,47 +433,47 @@
         ]
       },
       {
-        "title": "📁 mkdir コマンドマスター",
-        "highlight": "フォルダ作成の達人になろう",
+        "title": "🔗 複合コマンドマスター",
+        "highlight": "&&で連携する実践テクニック",
         "sections": [
           {
-            "title": "📂 基本の使い方",
-            "icon": "📂",
-            "type": "commands",
-            "commands": [
-              {
-                "command": "mkdir project",
-                "description": "単一フォルダ作成"
-              },
-              {
-                "command": "mkdir project1 project2 project3",
-                "description": "複数フォルダを一度に作成"
-              }
-            ]
-          },
-          {
-            "title": "⚡ 応用テクニック",
+            "title": "⚡ && 演算子の基本",
             "icon": "⚡",
             "type": "commands",
             "commands": [
               {
-                "command": "mkdir -p parent/child/grandchild",
-                "description": "階層フォルダを一気に作成（-pオプション）"
+                "command": "mkdir project && cd project",
+                "description": "フォルダ作成後、そのフォルダに移動"
               },
               {
-                "command": "mkdir \"My Project\"",
-                "description": "スペース含むフォルダ名（クォートで囲む）"
+                "command": "touch file.txt && ls -l file.txt",
+                "description": "ファイル作成後、詳細情報を確認"
               }
             ]
           },
           {
-            "title": "💡 実践のコツ",
+            "title": "🏗️ 実際の開発パターン",
+            "icon": "🏗️",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir project && touch project/README.md && ls project",
+                "description": "プロジェクト作成→README追加→確認"
+              },
+              {
+                "command": "date && ls -la && pwd",
+                "description": "作業開始時刻記録→現在状況確認→位置確認"
+              }
+            ]
+          },
+          {
+            "title": "💡 && の重要なポイント",
             "icon": "💡",
             "type": "list",
             "items": [
-              "プロジェクト整理には階層構造が重要",
-              "名前は分かりやすく、英数字推奨",
-              "-pオプションで存在確認不要"
+              "前のコマンドが成功した時のみ次を実行",
+              "エラーが起きたら連携が停止（安全性）",
+              "実際の現場で最もよく使われるテクニック"
             ]
           }
         ]
