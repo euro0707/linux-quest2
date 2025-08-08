@@ -429,16 +429,47 @@
         ]
       },
       {
-        "title": "🚀 次のステップ",
+        "title": "📁 mkdir コマンドマスター",
+        "highlight": "フォルダ作成の達人になろう",
         "sections": [
           {
-            "title": "📈 キャリアアップの道筋",
-            "icon": "📈",
+            "title": "📂 基本の使い方",
+            "icon": "📂",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir project",
+                "description": "単一フォルダ作成"
+              },
+              {
+                "command": "mkdir project1 project2 project3",
+                "description": "複数フォルダを一度に作成"
+              }
+            ]
+          },
+          {
+            "title": "⚡ 応用テクニック",
+            "icon": "⚡",
+            "type": "commands",
+            "commands": [
+              {
+                "command": "mkdir -p parent/child/grandchild",
+                "description": "階層フォルダを一気に作成（-pオプション）"
+              },
+              {
+                "command": "mkdir \"My Project\"",
+                "description": "スペース含むフォルダ名（クォートで囲む）"
+              }
+            ]
+          },
+          {
+            "title": "💡 実践のコツ",
+            "icon": "💡",
             "type": "list",
             "items": [
-              "Webサーバー管理 (年収800万円〜)",
-              "クラウドインフラ設計 (年収1000万円〜)",
-              "DevOps・自動化エンジニア (年収1200万円〜)"
+              "プロジェクト整理には階層構造が重要",
+              "名前は分かりやすく、英数字推奨",
+              "-pオプションで存在確認不要"
             ]
           }
         ]

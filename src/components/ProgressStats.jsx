@@ -12,14 +12,15 @@ export default function ProgressStats() {
   const calculateStats = () => {
     try {
       const mistakes = getFromStorage('linuxQuest_mistakes', []);
-      const currentDay = parseInt(getFromStorage('linuxQuest_currentDay', '0'));
+      const currentDayRaw = getFromStorage('linuxQuest_currentDay', '0');
+      const currentDay = parseInt(currentDayRaw) || 0;
       
       // データ検証
       const validMistakes = Array.isArray(mistakes) ? mistakes.filter(m => m && typeof m.attempts === 'number') : [];
       
       const totalMistakes = validMistakes.reduce((sum, m) => sum + m.attempts, 0);
-      const totalAttempts = totalMistakes + Math.max(currentDay, 1);
-      const accuracy = totalAttempts > 0 ? Math.round(((totalAttempts - totalMistakes) / totalAttempts) * 100) : 100;
+      const totalAttempts = totalMistakes + currentDay;
+      const accuracy = totalAttempts > 0 ? Math.round(((totalAttempts - totalMistakes) / totalAttempts) * 100) : 0;
       
       setStats({
         totalAttempts,
@@ -34,7 +35,7 @@ export default function ProgressStats() {
         totalAttempts: 0,
         totalMistakes: 0,
         completedDays: 0,
-        accuracy: 100
+        accuracy: 0
       });
     }
   };

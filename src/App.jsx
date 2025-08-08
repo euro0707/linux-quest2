@@ -67,15 +67,8 @@ function App() {
 
   const handleSelectDay = (dayIndex) => {
     setSelectedDay(dayIndex);
-    // スライドが完了済みの場合は直接ゲーム画面へ、未完了の場合はスライドから開始
-    const dayKey = `day${dayIndex + 1}`;
-    
-    
-    if (slideProgress[dayKey]) {
-      setCurrentScreen('day');
-    } else {
-      setCurrentScreen('slide');
-    }
+    // 常にスライドから開始（復習機能のため）
+    setCurrentScreen('slide');
   };
 
   const handleSlideComplete = () => {

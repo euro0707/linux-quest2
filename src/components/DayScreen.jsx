@@ -107,9 +107,9 @@ export default function DayScreen({ day, onNext }) {
           <button
             onClick={onNext}
             className="mt-4 w-full bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-green-800"
-            aria-label="次のDayに進む"
+            aria-label={day.day === 8 ? "ホームに戻る" : "次のDayに進む"}
           >
-            ▶ 次のDayへ
+            {day.day === 8 ? "🏠 ホームに戻る" : "▶ 次のDayへ"}
           </button>
         </section>
       )}

@@ -24,7 +24,7 @@ export default function ChapterSelect({ currentDay, onSelectDay }) {
         >
           {data.map((day, idx) => {
             const unlocked = idx <= currentDay;
-            const isCompleted = idx < currentDay;
+            const isCompleted = idx < currentDay || (idx === currentDay && currentDay === data.length - 1);
             
             return (
               <div key={idx} role="gridcell">
